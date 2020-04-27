@@ -1,3 +1,5 @@
+require 'gossip'
+
 class ApplicationController < Sinatra::Base
 
 	 get '/' do
@@ -9,6 +11,7 @@ class ApplicationController < Sinatra::Base
 	 end
 
 	 post '/gossips/new/' do
+	 	Gossip.new("super_auteur", "super_gossip").save
 	 	puts "Ce programme ne fait rien pour le moment, on va donc afficher un message dans le terminal"
 	 end
 
